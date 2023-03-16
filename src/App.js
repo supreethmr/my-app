@@ -1,22 +1,19 @@
+import React, { useState } from 'react';
+import ControlledPaginator from 'terra-paginator/lib/ControlledPaginator';
 import logo from './logo.svg';
 import './App.css';
 
+const totalCount = 30;
+
 function App() {
+  const [currentPage, setCurrentPage] = useState(1);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <img src={logo} alt="logo" height={200} width={250} />
+        <ControlledPaginator onPageChange={(index) => { setCurrentPage(index) }} selectedPage={currentPage} totalCount={totalCount} itemCountPerPage={10} />
+        <div>Sample Content</div>
       </header>
     </div>
   );
