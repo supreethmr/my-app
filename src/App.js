@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import ControlledPaginator from 'terra-paginator/lib/ControlledPaginator';
+import Button from 'terra-button/lib/Button';
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -14,6 +16,7 @@ function App() {
         <img src={logo} alt="logo" height={200} width={250} />
         <ControlledPaginator onPageChange={(index) => { setCurrentPage(index) }} selectedPage={currentPage} totalCount={totalCount} itemCountPerPage={10} />
         <div>Sample Content</div>
+        <Button text="Click Me" onClick={() => alert('Ive been clicked!')} />
       </header>
     </div>
   );

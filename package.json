@@ -7,6 +7,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "terra-application": "^1.0.0",
+    "terra-button": "^3.65.0",
     "terra-paginator": "^2.82.0",
     "terra-i18n": "^4.40.0",
     "sass": "^1.59.3",
@@ -19,8 +20,8 @@
   "devDependencies": {
     "@cerner/terra-aggregate-translations": "^2.0.0"
   },
-    "scripts": { 
-    "aggregate-translations":"tt-aggregate-translations -b ./ -d ./src/**/translations -d ./translations -o ./node_modules/terra-i18n/node_modules -f es6",
+  "scripts": {
+    "aggregate-translations": "tt-aggregate-translations -b ./ -d ./src/**/translations -d ./translations -o ./node_modules/terra-i18n/node_modules -f es6",
     "start": "react-scripts start",
     "build": "npm run aggregate-translations && react-scripts build",
     "test": "react-scripts test",
